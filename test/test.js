@@ -141,6 +141,37 @@ describe('Contact Service', () => {
                     id: contact.id
                 });
             });
+
+            // Added to test email
+            // it('should return a matching contact from email', async () => {
+            //     const contact1 = createContact({ firstName: 'First', lastName: 'Last', primaryPhoneNumber: '314-555-0000', primaryEmail: 'test@gmail.com'});
+            //     const contact2 = createContact({ firstName: 'First', lastName: 'Other', primaryPhoneNumber: '314-555-0001', primaryEmail: 'onetwothree@gmail.com'});
+            //     //This contact should not be returned by the search
+            //     createContact({ firstName: 'John', lastName: 'Doe', primaryPhoneNumber: '303-123-4567'});
+                
+            //     await flush();
+            //     const results = service.search('test@gm');
+                
+            //     expect(results.length).to.equal(1);
+            //     expect(results.map(res => res.id)).includes(contact1.id);
+            // });
+
+            // Added to test address
+            // it('should return contact and match address', async () => {
+            //     const contact = createContact({ firstName: 'John', lastName: 'Smith', nickName: 'Johnny' ,primaryEmail: 'john.smith@mail.com', addressLine1: 'Address line 1', addressLine2: 'Line 2', city: 'City' });
+                
+            //     await flush();
+            //     const results = service.search('Johnny');
+                
+            //     expect(results.length).to.equal(1);
+            //     expect(results[0]).to.deep.equal({
+            //         name: 'Johnny Smith',
+            //         email: 'john.smith@mail.com',
+            //         address: 'Address line 1 Line 2 City',
+            //         id: contact.id,
+            //         phones: []
+            //     });
+            // });
         });
 
         describe('change event', () => {
